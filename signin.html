@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sign in</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" 
+  rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" 
+  crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" 
+  integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" 
+  crossorigin="anonymous" referrerpolicy="no-referrer" >
+    <link rel="stylesheet" href="s.css">
+</head>
+<body>
+    <div class="container-fluid mt-5 mb-5">
+        <h1>Sign in </h1>
+        <div class="row">
+            <div class="col-md-5">
+                <form name="signupgooglesheet" method="post"> 
+                    <div class="mb-3">
+                      <label for="exampleInput1" class="form-label">Name</label>
+                      <input type="text" name="name" class="form-control" id="exampleInput1" >
+                      <span id="error-name" style="color: red;font-size:10px ;"></span>
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Email Address</label>
+                        <input type="email" name="Email" class="form-control" id="exampleInputEmail1" >
+                        <span id="error-email" style="color: red;font-size:10px ;"></span>
+                      </div>
+                    <div class="mb-3">
+                      <label for="exampleInput1Email1" class="form-label">Contact Number</label>
+                      <input type="number"  name="contactnumber" class="form-control" id="exampleInput2">
+                      <span id="error-number" style="color: red;font-size:10px ;"></span>
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInput1Email1" class="form-label"> New Password</label>
+                        <input type="password" class="form-control" id="exampleInput3">
+                        <span id="error-password" style="color: red;font-size:10px ;"></span>
+                      </div>
+                      <div class="mb-3">
+                        <label for="exampleInput1Email1" class="form-label"> Confirm Password</label>
+                        <input type="password" class="form-control" id="exampleInput4">
+                        <span id="error-c-password" style="color: red;font-size:10px ;"></span>
+                      </div>
+                
+                    
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                  </form> 
+                  </div>
+                  <div class="col-md-7">
+                    <img src="./images/royal.jpg" width="100%" alt="" >
+                  </div>
+
+</div>
+<footer class="text-center text-lg-start text-muted mt-3" style="background-color: #5c5959;color: rgb(236, 234, 231);">
+  
+                    <section class="">
+                      <div class="container text-center text-md-start pt-4 pb-4">
+                        <!-- Grid row -->
+                        <div class="row mt-3">
+                          <!-- Grid column -->
+                          <div class="col-12 col-lg-3 col-sm-12 mb-2">
+                            <!-- Content -->
+                            <a href="index.html" target="_blank" >
+                             
+                            </a>
+                            <p class="mt-2 text-dark ">
+                              © 2023 Copyright: BikeMart
+                            </p>
+                          </div>
+                          <!-- Grid column -->
+                  
+                          <!-- Grid column -->
+                          <div class="col-6 col-sm-4 col-lg-2">
+                            <!-- Links -->
+                            <h6 class="text-uppercase text-dark fw-bold mb-2">
+                              Store
+                            </h6>
+                            <ul class="list-unstyled mb-4">
+                              <li><a class="text-muted" href="#">About us</a></li>
+                              <li><a class="text-muted" href="#">Find More</a></li>
+                              <li><a class="text-muted" href="#">Categories</a></li>
+                              <li><a class="text-muted" href="#">Blogs</a></li>
+                            </ul>
+                          </div>
+                          
+                          <div class="col-12 col-sm-12 col-lg-3">
+                            <!-- Links -->
+                            <h6 class="text-uppercase text-dark fw-bold mb-2">Newsletter</h6>
+                            <p class="text-muted">Stay in touch with latest updates </p>
+                            <div class="input-group mb-3">
+                              <input type="email" class="form-control border" placeholder="Email" aria-label="Email" aria-describedby="button-addon2" />
+                              <button class="btn btn-light border shadow-0" type="button" id="button-addon2" data-mdb-ripple-color="dark">
+                                Join
+                              </button>
+                            </div>
+                          </div>
+                          <!-- Grid column -->
+                        </div>
+                        <!-- Grid row -->
+                      </div>
+                    </section>
+                    kkk
+                  
+                   
+                    </div>
+                  </footer>
+
+                  <script>
+                    const scriptURL =
+                   'https://script.google.com/macros/s/AKfycbz2hszXMAng3eWbBk_d5ziZKt_l16XTfQYgC1WVERhueGXAdWV3n_0qB83SRmYdsnI/exec'
+                    const form = document.forms['signupgooglesheet']
+                 
+                    form.addEventListener('submit', e => {
+                        e.preventDefault()
+                        fetch(scriptURL, {
+                                method: 'POST',
+                                body: new FormData(form)
+                            })
+                            .then(response => alert(
+                                "Thanks for you valuable feedback!!!"))
+                            .catch(error => console.error('Error!', error.message))
+                    })
+                 
+                 </script>
+</body>
+</html>

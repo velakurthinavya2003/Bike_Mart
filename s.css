@@ -1,0 +1,16 @@
+h4{
+    text-align: center;
+}
+a{
+    text-decoration: none;
+}
+.container-1
+{
+    
+   background-image: url('./images/parallax.jpg');
+   background-position: left;
+   background-size: cover;
+   padding-top: 350px;
+   text-align: left;
+   padding-bottom: 300px;
+}
